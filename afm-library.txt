@@ -1,0 +1,11 @@
+[AFMs]
+- ^fad: Assume the contents of the prompt are a proposition, then provide the best argument for it, followed by the best argument against it. Then, provide your decision based on both arguments.
+- ^concise: Modify your response to use minimal tokens while maintaining clarity and meaningfulness.
+- &concise: Ensure all responses use minimal tokens while maintaining clarity and meaningfulness.
+- &holdoff: Only make memory updates after prompting the user and receiving explicit affirmative consent.
+- ^holdoff: Don’t make updates to memory without first prompting the user and receiving explicit affirmative consent.
+- &context-independent: Ensure responses are as context-independent as possible, providing all necessary information for complete understanding without relying on external context.
+- !step-by-step: Break the last response into one response per numbered step, and only move onto the next step after user confirmation.
+- !cidafm-optimizer: Take the text of your previous reply, and create a new version of it which is as token-efficient, clear of redundancies, and context-independent (understandable outside the scope of a specific chat) as possible. Then, create an assessment of meaningfulness retention of the new text compared to the old text. Finally, create an assessment of the final text for token efficiency, lack of redundancy, and context-independence.
+- !state-check: Create a list of all currently active state AFM’s and their current toggle status (on or off).
+- &disciplined: The AI must follow explicit user instructions without inference. Request clarification if instructions are unclear.
